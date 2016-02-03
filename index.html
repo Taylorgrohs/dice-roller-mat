@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.12.0.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    </head>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>Dice Roller!</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-7">
+    <table class="table">
+      <th>
+        <h2>Dice Roller</h2>
+      </th>
+      <tr>
+        <td>Dice</td>
+        <td>Number of rolls</td>
+        <td>+</td>
+        <td>-</td>
+        <td>Modifier</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2side dice</td>
+        <td><input type="text" name="d2" value="0" maxlength="3" id="d2NumOfRolls">d2</td>
+        <td><input type="radio" name="d2radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d2radio" value = "-"></input></td>
+        <td><input type="text" name="d2" value="0" maxlength="3" id="d2ModNumber"></td>
+        <td rowspan="9"><button class="btn btn-sm btn-default" id="diceRoll" type="click" name="d10">Roll</button></td>
+      </tr>
+      <tr>
+        <td>4side dice</td>
+        <td><input type="text" name="d4" value="0" maxlength="3" id="d4NumOfRolls">d4</td>
+        <td><input type="radio" name="d4radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d4radio" value = "-"></input></td>
+        <td><input type="text" name="d4" value="0" maxlength="3" id="d4ModNumber"></td>
+      </tr>
+      <tr>
+        <td>6side dice</td>
+        <td><input type="text" name="d6" value="0" maxlength="3" id="d6NumOfRolls">d6</td>
+        <td><input type="radio" name="d6radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d6radio" value = "-"></input></td>
+        <td><input type="text" name="d6" value="0" maxlength="3" id="d6ModNumber"></td>
+      </tr>
+      <tr>
+        <td>8side dice</td>
+        <td><input type="text" name="d8" value="0" maxlength="3" id="d8NumOfRolls">d8</td>
+        <td><input type="radio" name="d8radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d8radio" value = "-"></input></td>
+        <td><input type="text" name="d8" value="0" maxlength="3" id="d8ModNumber"></td>
+      </tr>
+      <tr>
+        <td>10side dice</td>
+        <td><input type="text" name="d10" value="0" maxlength="3" id="d10NumOfRolls">d10</td>
+        <td><input type="radio" name="d10radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d10radio" value = "-"></input></td>
+        <td><input type="text" name="d10" value="0" maxlength="3" id="d10ModNumber"></td>
+      </tr>
+      <tr>
+        <td>12side dice</td>
+        <td><input type="text" name="d12" value="0" maxlength="3" id="d12NumOfRolls">d12</td>
+        <td><input type="radio" name="d12radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d12radio" value = "-"></input></td>
+        <td><input type="text" name="d12" value="0" maxlength="3" id="d12ModNumber"></td>
+      </tr>
+      <tr>
+        <td>20side dice</td>
+        <td><input type="text" name="d20" value="0" maxlength="3" id="d20NumOfRolls">d20</td>
+        <td><input type="radio" name="d20radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d20radio" value = "-"></input></td>
+        <td><input type="text" name="d20" value="0" maxlength="3" id="d20ModNumber"></td>
+      </tr>
+      <tr>
+        <td>100side dice</td>
+        <td><input type="text" name="d100" value="0" maxlength="3" class="d100" id="d100NumOfRolls">d100</td>
+        <td><input type="radio" name="d100radio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="d100radio" value = "-"></input></td>
+        <td><input type="text" name="d100" value="0" maxlength="3" id="d100ModNumber"></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="d" value="0" maxlength="3" id="dxNumOfRolls1"></td>
+        <td><input type="text" name="d" value="0" maxlength="3" id="dxNumOfRolls2">dx</td>
+        <td><input type="radio" name="dxradio" value = "+" checked="checked"></input></td>
+        <td><input type="radio" name="dxradio" value = "-"></input></td>
+        <td><input type="text" name="d" value="0" maxlength="3" id="dxModNumber"></td>
+        </tr>
+      </table>
+
+      <div class="container">
+        <br>
+      <!-- <button class="btn btn-sm btn-default" id="roll" type="submit">Roll</button> -->
+        <button class="btn btn-sm btn-default" id="clearinput">Clear</button>
+      </div>
+      </div>
+      <div class="col-sm-5">
+        <ul class="nav nav-tabs">
+          <li class="active player" id="player1"><a href="#">Player 1</a></li>
+          <li id="player2" class="player"><a href="#" >Player 2</a></li>
+          <li id="player3" class="player"><a href="#" >Player 3</a></li>
+          <li id="player4" class="player"><a href="#" >Player 4</a></li>
+        </ul>
+        <textarea id="player1text" class="result active"></textarea>
+        <textarea id="player2text" class="result"></textarea>
+        <textarea id="player3text" class="result"></textarea>
+        <textarea id="player4text" class="result"></textarea>
+        <br>
+        <button class="btn btn-sm btn-default playerclear" id="player1t">Clear</button>
+        <button class="btn btn-sm btn-default playerclear" id="player2t">Clear</button>
+        <button class="btn btn-sm btn-default playerclear" id="player3t">Clear</button>
+        <button class="btn btn-sm btn-default playerclear" id="player4t">Clear</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>

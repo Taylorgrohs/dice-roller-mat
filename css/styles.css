@@ -1,0 +1,12 @@
+textarea {
+  min-width: 350px;
+  min-height: 450px;
+}
+
+#player2text, #player3text, #player4text, #player2t, #player3t, #player4t {
+  display: none;
+}
+
+#diceRoll {
+  margin-top: 170px;
+}
